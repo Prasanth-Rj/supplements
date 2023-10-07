@@ -1,6 +1,7 @@
 const data = {
   products: [
     {
+      _id:'1',
       name: 'MuscleBlaze whey Protien',
       slug: 'muscleblaze-whey-protien',
       category: 'whey protien',
@@ -13,6 +14,7 @@ const data = {
       description: 'high quality product',
     },
     {
+      _id:'2',
       name: 'MuscleBlaze Creatine',
       slug: 'muscleblaze-creatine',
       category: 'Creatine',
@@ -25,6 +27,7 @@ const data = {
       description: 'high quality product',
     },
     {
+      _id:'3',
       name: 'MuscleBlaze Mass Gainer',
       slug: 'muscleblaze-mass-gainer',
       category: 'Mass Gainer',
@@ -37,6 +40,7 @@ const data = {
       description: 'high quality product',
     },
     {
+      _id:'4',
       name: 'MuscleBlaze Peanut Butter',
       slug: 'muscleBlaze-peanut-butter',
       category: 'Peanut Butter',
