@@ -1,7 +1,22 @@
+import bcrypt from 'bcryptjs';
 const data = {
+  users: [
+    {
+      name: 'Prasanth',
+      email: 'admin@example.com',
+      password: bcrypt.hashSync('123456'),
+      isAdmin: true,
+    },
+    {
+      name: 'Kishore',
+      email: 'user@example.com',
+      password: bcrypt.hashSync('123456'),
+      isAdmin: false,
+    },
+  ],
   products: [
     {
-      _id:'1',
+      // _id:'1',
       name: 'MuscleBlaze whey Protien',
       slug: 'muscleblaze-whey-protien',
       category: 'whey protien',
@@ -14,20 +29,20 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id:'2',
+      //_id:'2',
       name: 'MuscleBlaze Creatine',
       slug: 'muscleblaze-creatine',
       category: 'Creatine',
       image: '/images/p2.jpg',
       price: 450,
-      countInStocks: 0,
+      countInStocks:0,
       brand: 'MuscleBlaze',
       rating: 4.5,
       numReviews: 10,
       description: 'high quality product',
     },
     {
-      _id:'3',
+      //_id:'3',
       name: 'MuscleBlaze Mass Gainer',
       slug: 'muscleblaze-mass-gainer',
       category: 'Mass Gainer',
@@ -40,7 +55,7 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id:'4',
+      //_id:'4',
       name: 'MuscleBlaze Peanut Butter',
       slug: 'muscleBlaze-peanut-butter',
       category: 'Peanut Butter',

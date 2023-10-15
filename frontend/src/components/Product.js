@@ -7,6 +7,7 @@ import { useContext } from 'react';
 import { Store } from '../Store';
 function Product(props) {
   const { product } = props;
+  //console.log(product)
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const {
     cart: { cartItems },
@@ -35,7 +36,7 @@ function Product(props) {
         </Link>
         <Rating rating={product.rating} numReviews={product.numReviews} />
         <Card.Text>$ {product.price}</Card.Text>
-        {product.countInstock === 0 ?(
+        {product.countInStocks === 0 ?(
           <Button variant="light" disabled>
             Out of stock
           </Button>
