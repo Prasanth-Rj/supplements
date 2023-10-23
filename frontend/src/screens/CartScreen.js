@@ -9,6 +9,7 @@ import Button from 'react-bootstrap/esm/Button';
 import Card from 'react-bootstrap/esm/Card';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { API_DOMAIN } from '../apilink';
 
 export default function CartScreen() {
   const navigate=useNavigate();
@@ -17,7 +18,7 @@ export default function CartScreen() {
     cart: { cartItems },
   } = state;
   const updateCartHandler = async (item, quantity) => {
-    const { data } = await axios.get(`/api/products/${item._id}`);
+    const { data } = await axios.get(API_DOMAIN+`/api/products/${item._id}`);
     if (data.countInstock < quantity) {
       window.alert('Sorry. Product is out of stock');
       return;

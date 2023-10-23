@@ -14,6 +14,7 @@ import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { getError } from '../utils';
 import { Store } from '../Store';
+import { API_DOMAIN } from '../apilink';
 const reducer = (state, action) => {
   switch (action.type) {
     case 'FETCH_REQUEST':
@@ -40,7 +41,7 @@ function ProductScreen() {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
-        const result = await axios.get(`/api/products/slug/${slug}`);
+        const result = await axios.get(API_DOMAIN+`/api/products/slug/${slug}`);
         dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
         //setProducts(result.data);
       } catch (err) {
@@ -58,7 +59,7 @@ function ProductScreen() {
     console.log(products);
     const existItem=cart.cartItems.find((x) => x.id === products._id);
     const quantity=existItem ? existItem.quantity + 1 :1;
-    const {data}= await axios.get(`/api/products/${products._id}`);
+    const {data}= await axios.get(API_DOMAIN+`/api/products/${products._id}`);
     if(data.countInstock<quantity){
       window.alert('Sorry. Product is out of stock');
       return;

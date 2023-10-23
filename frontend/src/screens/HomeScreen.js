@@ -7,6 +7,7 @@ import Product from '../components/Product';
 import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../components/LoadingBox';
 import { API_DOMAIN } from '../apilink';
+
 //import logger from 'use-reducer-logger';
 
 //import data from "../data";

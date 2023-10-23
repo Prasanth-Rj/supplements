@@ -8,6 +8,7 @@ import { useContext, useEffect, useState } from 'react';
 import { Store } from '../Store.js';
 import { toast } from 'react-toastify';
 import { getError } from '../utils.js';
+import { API_DOMAIN } from '../apilink.js';
 export default function SigninScreen() {
   const navigate = useNavigate();
   const { search } = useLocation();
@@ -20,7 +21,7 @@ export default function SigninScreen() {
   const submitHandler = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await Axios.post('/api/users/signin', {
+      const { data } = await Axios.post(API_DOMAIN+'/api/users/signin', {
         email,
         password,
       });
