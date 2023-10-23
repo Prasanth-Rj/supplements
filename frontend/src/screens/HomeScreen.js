@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Product from '../components/Product';
 import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../components/LoadingBox';
+import { API_DOMAIN } from '../apilink';
 //import logger from 'use-reducer-logger';
 
 //import data from "../data";
@@ -32,7 +33,7 @@ function HomeScreen() {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
-        const result = await axios.get('/api/products');
+        const result = await axios.get( API_DOMAIN+'/api/products');
         dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
         //setProducts(result.data);
       } catch (err) {
