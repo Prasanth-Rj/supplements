@@ -27,7 +27,7 @@ export default function ProfileScreen() {
   const [name, setName] = useState(userInfo.name);
   const [email, setEmail] = useState(userInfo.email);
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+ const [confirmPassword, setConfirmPassword] = useState('');
   const [{ loadingUpdate }, dispatch] = useReducer(reducer, {
     loadingUpdate: false,
   });
@@ -35,6 +35,11 @@ export default function ProfileScreen() {
   const submitHandler = async (e) => {
     e.preventDefault();
     try {
+        if(loadingUpdate){
+            if(confirmPassword===' '){
+
+            }
+        }
       const { data } = await axios.put(
         '/api/users/profile',
         {

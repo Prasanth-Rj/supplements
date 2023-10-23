@@ -22,7 +22,7 @@ import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import OrderScreen from './screens/OrderScreen';
 
 import OrderHistoryScreen from './screens/OrderHistoryScreen.js';
-import NavbarToggle from 'react-bootstrap/esm/NavbarToggle';
+
 import ProfileScreen from './screens/ProfileScreen';
 
 function App() {
