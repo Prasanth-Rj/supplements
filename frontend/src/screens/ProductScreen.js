@@ -8,7 +8,7 @@ import Rating from '../components/Rating';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
-import ListGroupItem from 'react-bootstrap/esm/ListGroupItem';
+
 import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
