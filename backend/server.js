@@ -6,6 +6,8 @@ import seedRouter from './routes/seedRoutes.js';
 import productRouter from './routes/productsRoutes.js';
 import userRouter from './routes/userRoutes.js';
 import orderRouter from './routes/orderRoutes.js';
+const core=require('cors');
+
 dotenv.config();
 mongoose
   .connect(process.env.MONGODB_URI)
@@ -17,7 +19,9 @@ mongoose
   });
 const app = express();
 app.use(express.json());
+
 app.use(express.urlencoded({ extended: true }));
+app.use(core())
 app.get('/api/keys/paypal', (req, res) => {
   res.send(process.env.PAYPAL_CLIENT_ID || 'sb');
 });
