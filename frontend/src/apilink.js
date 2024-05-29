@@ -1,1 +1,1 @@
-export const API_DOMAIN='https://weak-jade-cuttlefish-tutu.cyclic.app/'
+export const API_DOMAIN="https://supplements-f550.onrender.com/"
